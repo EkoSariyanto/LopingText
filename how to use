@@ -1,0 +1,59 @@
+use implementation 'com.tomer:fadingtextview:2.5' at app.gradle
+
+
+make new file at res--->values
+
+    at Values, rigr click--> new-->values resource file
+    type your name of file, mybe like wordloppings
+
+
+at wordloppings.xml, make this code
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Contoh">
+        <item>ini</item>
+        <item>adalah</item>
+        <item>modul</item>
+        <item>pembelajaran</item>
+        <item>keep</item>
+        <item>semangat</item>
+        <item>belajar</item>
+    </string-array>
+
+</resources>
+
+
+
+then at main_activity.java
+
+
+import com.tomer.fadingtextview.FadingTextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        FadingTextView FadingTextView; */ declare fiding text viw/*
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+
+        FadingTextView = (FadingTextView)findViewById(R.id.fadingtext);  */declare fidingtextview refer to id="@+id/fadingtext" in content_main.xml your layout/*
+        FadingTextView.setTimeout(FadingTextView.SECONDS,2);  */set time to change/*
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+    }
+
+
